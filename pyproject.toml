@@ -1,0 +1,29 @@
+[project]
+name = "esgf-core-models"
+version = "0.1.0"
+description = "Pydantic models and exceptions for the ESGF core architecture"
+readme = "README.rst"
+license = { text = "MIT" }
+authors = [
+    {"name" = "Lukasz Lacinski", "email" = "lukasz@uchicago.edu"},
+    {"name" = "Rhys Evans", "email" = "rhys.r.evans@stfc.ac.uk"},
+]
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "pydantic>=2.11.0",
+    "stac-pydantic>=3.1.1",
+    "stac-fastapi.extensions>=6.3.0",
+]
+
+[dependency-groups]
+test = ["pytest>=8", "coverage[toml]>=7.6.0"]
+
+[tool.coverage.run]
+branch = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/esgf_core_models"]
