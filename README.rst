@@ -15,14 +15,18 @@ contains a Kafka producer and consumer, STAC validation and settings. Using the
 models from there means installing all of those dependencies too. This package
 contains only the models, so a project that has its own Kafka client, or none
 at all, can still use the same definitions without the extra weight. Its
-dependencies are ``pydantic``, ``stac-pydantic`` and ``stac-fastapi.extensions``.
+dependencies are ``pydantic`` and ``stac-pydantic``.
 
 Install
 -------
 
-::
+Add it to a project managed by `uv <https://docs.astral.sh/uv/>`_::
 
-    pip install esgf-core-models
+    uv add esgf-core-models
+
+Or install it into an existing virtual environment::
+
+    uv pip install esgf-core-models
 
 Requires Python 3.12 or newer.
 
