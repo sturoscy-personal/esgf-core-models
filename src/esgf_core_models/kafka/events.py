@@ -6,11 +6,12 @@ from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel
-from stac_fastapi.extensions.transaction.request import (
+from stac_pydantic.item import Item
+
+from esgf_core_models._vendor.stac_fastapi import (
     PartialItem,
     PatchOperation,
 )
-from stac_pydantic.item import Item
 
 
 class _Payload(BaseModel):
