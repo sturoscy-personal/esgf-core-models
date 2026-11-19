@@ -20,9 +20,13 @@ dependencies are ``pydantic``, ``stac-pydantic`` and ``stac-fastapi.extensions``
 Install
 -------
 
-::
+Add it to a project managed by `uv <https://docs.astral.sh/uv/>`_::
 
-    pip install esgf-core-models
+    uv add esgf-core-models
+
+Or install it into an existing virtual environment::
+
+    uv pip install esgf-core-models
 
 Requires Python 3.12 or newer.
 
